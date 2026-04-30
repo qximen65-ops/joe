@@ -3,43 +3,54 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>全台二度就業工作資訊站</title>
+<title>全台二度就業｜工作機會資訊站</title>
+
 <style>
 *{box-sizing:border-box}
 body{
   margin:0;
   font-family:"Microsoft JhengHei",Arial,sans-serif;
-  background:#f4f7fb;
+  background:#f6f8fb;
   color:#1f2937;
+  line-height:1.7;
 }
 .header{
-  background:linear-gradient(135deg,#123b6d,#2563eb);
-  color:white;
-  padding:45px 20px;
+  background:linear-gradient(135deg,#0f2f5f,#2563eb);
+  color:#fff;
+  padding:48px 20px;
   text-align:center;
 }
 .header h1{
-  margin:0;
   font-size:34px;
+  margin:0 0 12px;
 }
 .header p{
   font-size:18px;
-  margin-top:12px;
+  margin:0 0 24px;
+}
+.btn{
+  display:inline-block;
+  background:#16a34a;
+  color:#fff;
+  padding:14px 26px;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:bold;
 }
 .container{
-  max-width:1000px;
+  max-width:1050px;
   margin:auto;
   padding:24px 16px 50px;
 }
 .card{
-  background:white;
-  border-radius:16px;
-  padding:24px;
+  background:#fff;
+  border-radius:18px;
+  padding:26px;
   margin-bottom:18px;
-  box-shadow:0 6px 18px rgba(0,0,0,.07);
+  box-shadow:0 8px 22px rgba(0,0,0,.06);
 }
 h2{
-  color:#123b6d;
+  color:#0f2f5f;
   margin-top:0;
 }
 .grid{
@@ -48,34 +59,30 @@ h2{
   gap:16px;
 }
 .box{
-  background:#fafafa;
+  background:#f9fafb;
   border:1px solid #e5e7eb;
-  border-radius:14px;
-  padding:18px;
+  border-radius:16px;
+  padding:20px;
 }
 .box h3{
   margin-top:0;
   color:#111827;
 }
+.badge{
+  display:inline-block;
+  background:#e8f1ff;
+  color:#174ea6;
+  padding:7px 13px;
+  border-radius:999px;
+  margin:5px;
+  font-size:14px;
+}
 ul{
   padding-left:20px;
-  line-height:1.8;
 }
-.btn{
-  display:inline-block;
-  background:#16a34a;
-  color:white;
-  padding:14px 22px;
-  border-radius:10px;
-  text-decoration:none;
-  font-weight:bold;
-  margin-top:10px;
-}
-.btn:hover{background:#12813b}
 .notice{
   font-size:14px;
   color:#6b7280;
-  line-height:1.8;
 }
 .footer{
   text-align:center;
@@ -83,14 +90,10 @@ ul{
   font-size:13px;
   padding:20px;
 }
-.tag{
-  display:inline-block;
-  background:#e0ecff;
-  color:#123b6d;
-  padding:6px 12px;
-  border-radius:20px;
-  margin:4px;
-  font-size:14px;
+.line-box{
+  background:#ecfdf5;
+  border:1px solid #bbf7d0;
+  text-align:center;
 }
 </style>
 </head>
@@ -100,30 +103,29 @@ ul{
 <section class="header">
   <h1>全台二度就業工作資訊站</h1>
   <p>穩定工作｜內勤外勤｜區域職缺｜專人協助說明</p>
-  <a class="btn" href="https://line.me/ti/p/你的LINE" target="_blank">點擊 LINE 了解工作</a>
+  <a class="btn" href="https://line.me/ti/p/你的LINE" target="_blank">LINE 了解工作內容</a>
 </section>
 
 <div class="container">
 
   <div class="card">
-    <h2>適合正在尋找新工作方向的你</h2>
+    <h2>正在尋找新的工作方向嗎？</h2>
     <p>
-      如果你正在考慮重新投入職場、轉換工作環境，或想了解穩定型工作機會，
-      我們提供全台各區域工作資訊說明，協助你依照所在地區與適合方向了解職缺內容。
+      我們提供全台各區域工作資訊說明，包含內勤、外勤、物流配送、倉儲協助、行政客服等類型。
+      適合正在考慮二度就業、轉職，或希望了解穩定工作機會的朋友。
     </p>
-    <div>
-      <span class="tag">二度就業</span>
-      <span class="tag">穩定工作</span>
-      <span class="tag">內勤職務</span>
-      <span class="tag">外勤協助</span>
-      <span class="tag">物流配送</span>
-      <span class="tag">行政客服</span>
-    </div>
+    <span class="badge">二度就業</span>
+    <span class="badge">穩定工作</span>
+    <span class="badge">內勤職務</span>
+    <span class="badge">外勤協助</span>
+    <span class="badge">物流配送</span>
+    <span class="badge">行政客服</span>
   </div>
 
   <div class="card">
     <h2>目前工作類型</h2>
     <div class="grid">
+
       <div class="box">
         <h3>外勤配送協助</h3>
         <ul>
@@ -145,20 +147,21 @@ ul{
       <div class="box">
         <h3>內勤行政協助</h3>
         <ul>
-          <li>資料整理、基本文書處理</li>
+          <li>資料整理與基本文書處理</li>
           <li>訊息回覆與客服協助</li>
-          <li>適合細心穩定者</li>
+          <li>適合細心、穩定者</li>
         </ul>
       </div>
 
       <div class="box">
         <h3>區域任務協助</h3>
         <ul>
-          <li>依照指定流程完成任務</li>
+          <li>依指定流程完成任務</li>
           <li>內容單純，專人說明</li>
           <li>可先了解再評估</li>
         </ul>
       </div>
+
     </div>
   </div>
 
@@ -170,28 +173,28 @@ ul{
         <h3>北部地區</h3>
         <p>台北、新北、基隆、桃園、新竹</p>
         <p>外勤配送、物流支援、行政協助</p>
-        <a class="btn" href="https://line.me/ti/p/你的LINE" target="_blank">LINE了解北部職缺</a>
+        <a class="btn" href="https://line.me/ti/p/你的LINE" target="_blank">了解北部職缺</a>
       </div>
 
       <div class="box">
         <h3>中部地區</h3>
         <p>苗栗、台中、彰化、南投</p>
         <p>倉儲作業、配送協助、區域支援</p>
-        <a class="btn" href="https://line.me/ti/p/你的LINE" target="_blank">LINE了解中部職缺</a>
+        <a class="btn" href="https://line.me/ti/p/你的LINE" target="_blank">了解中部職缺</a>
       </div>
 
       <div class="box">
         <h3>南部地區</h3>
         <p>雲林、嘉義、台南、高雄、屏東</p>
         <p>物流配送、外勤協助、內勤客服</p>
-        <a class="btn" href="https://line.me/ti/p/你的LINE" target="_blank">LINE了解南部職缺</a>
+        <a class="btn" href="https://line.me/ti/p/你的LINE" target="_blank">了解南部職缺</a>
       </div>
 
       <div class="box">
         <h3>東部與其他地區</h3>
         <p>宜蘭、花蓮、台東、離島地區</p>
-        <p>可依所在區域協助了解安排方式</p>
-        <a class="btn" href="https://line.me/ti/p/你的LINE" target="_blank">LINE了解其他地區</a>
+        <p>可依所在地協助了解安排方式</p>
+        <a class="btn" href="https://line.me/ti/p/你的LINE" target="_blank">了解其他地區</a>
       </div>
 
     </div>
@@ -200,15 +203,18 @@ ul{
   <div class="card">
     <h2>了解流程</h2>
     <ul>
-      <li>第一步：選擇你所在的地區</li>
-      <li>第二步：點擊 LINE 聯繫專人</li>
-      <li>第三步：了解工作內容、區域與安排方式</li>
-      <li>第四步：依照自身狀況評估是否進一步了解</li>
+      <li>選擇你所在的區域</li>
+      <li>點擊 LINE 聯繫專人</li>
+      <li>了解工作內容、地區與安排方式</li>
+      <li>依照自身狀況評估是否進一步了解</li>
     </ul>
-    <a class="btn" href="https://line.me/ti/p/你的LINE" target="_blank">立即 LINE 詢問</a>
   </div>
 
-  
+  <div class="card line-box">
+    <h2>想了解適合你的工作嗎？</h2>
+    <p>點擊下方 LINE，將有專人為你說明目前可了解的工作內容。</p>
+    <a class="btn" href="https://line.me/ti/p/你的LINE" target="_blank">立即 LINE 詢問</a>
+  </div>
 
   <div class="card notice">
     <strong>提醒：</strong><br>
