@@ -1,232 +1,463 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>全台二度就業｜工作機會資訊站</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>فرص عمل متنوعة | 多元工作機會</title>
+  <meta name="description" content="فرص عمل بدوام جزئي أو كامل مع شرح واضح قبل البدء. 兼職/正職工作資訊說明，提供清楚流程與聯絡方式。" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Arial", "Noto Sans Arabic", "Microsoft JhengHei", sans-serif;
+      background: #f7f4ee;
+      color: #1c2533;
+      line-height: 1.75;
+    }
+    a { text-decoration: none; }
+    .page { width: 100%; overflow-x: hidden; }
+    .container { width: min(1120px, 92%); margin: 0 auto; }
 
-<style>
-*{box-sizing:border-box}
-body{
-  margin:0;
-  font-family:"Microsoft JhengHei",Arial,sans-serif;
-  background:#f6f8fb;
-  color:#1f2937;
-  line-height:1.7;
-}
-.header{
-  background:linear-gradient(135deg,#0f2f5f,#2563eb);
-  color:#fff;
-  padding:48px 20px;
-  text-align:center;
-}
-.header h1{
-  font-size:34px;
-  margin:0 0 12px;
-}
-.header p{
-  font-size:18px;
-  margin:0 0 24px;
-}
-.btn{
-  display:inline-block;
-  background:#16a34a;
-  color:#fff;
-  padding:14px 26px;
-  border-radius:999px;
-  text-decoration:none;
-  font-weight:bold;
-}
-.container{
-  max-width:1050px;
-  margin:auto;
-  padding:24px 16px 50px;
-}
-.card{
-  background:#fff;
-  border-radius:18px;
-  padding:26px;
-  margin-bottom:18px;
-  box-shadow:0 8px 22px rgba(0,0,0,.06);
-}
-h2{
-  color:#0f2f5f;
-  margin-top:0;
-}
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-  gap:16px;
-}
-.box{
-  background:#f9fafb;
-  border:1px solid #e5e7eb;
-  border-radius:16px;
-  padding:20px;
-}
-.box h3{
-  margin-top:0;
-  color:#111827;
-}
-.badge{
-  display:inline-block;
-  background:#e8f1ff;
-  color:#174ea6;
-  padding:7px 13px;
-  border-radius:999px;
-  margin:5px;
-  font-size:14px;
-}
-ul{
-  padding-left:20px;
-}
-.notice{
-  font-size:14px;
-  color:#6b7280;
-}
-.footer{
-  text-align:center;
-  color:#6b7280;
-  font-size:13px;
-  padding:20px;
-}
-.line-box{
-  background:#ecfdf5;
-  border:1px solid #bbf7d0;
-  text-align:center;
-}
-</style>
+    .nav {
+      background: rgba(255,255,255,.88);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #eadfca;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 0;
+      gap: 16px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      color: #0f2c4c;
+      letter-spacing: .3px;
+    }
+    .brand-badge {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #0f2c4c, #d6a64f);
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-weight: 900;
+    }
+    .nav-cta {
+      background: #1fa855;
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-weight: 800;
+      box-shadow: 0 8px 20px rgba(31,168,85,.22);
+      white-space: nowrap;
+    }
+
+    .hero {
+      padding: 72px 0 54px;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(214,166,79,.22), transparent 28%),
+        radial-gradient(circle at 80% 10%, rgba(15,44,76,.12), transparent 30%);
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      align-items: center;
+      gap: 42px;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #fff7e6;
+      color: #8a641d;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-weight: 800;
+      margin-bottom: 18px;
+      border: 1px solid #ecd6a4;
+    }
+    h1 {
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: 1.18;
+      color: #0f2c4c;
+      margin-bottom: 18px;
+    }
+    .hero-sub {
+      font-size: clamp(17px, 2vw, 22px);
+      color: #435064;
+      margin-bottom: 26px;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 22px;
+    }
+    .btn-primary, .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 16px;
+      padding: 14px 24px;
+      font-weight: 900;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .btn-primary {
+      background: #1fa855;
+      color: #fff;
+      box-shadow: 0 14px 30px rgba(31,168,85,.24);
+    }
+    .btn-secondary {
+      background: #fff;
+      color: #0f2c4c;
+      border: 1px solid #eadfca;
+    }
+    .btn-primary:hover, .btn-secondary:hover { transform: translateY(-2px); }
+    .trust-line {
+      font-size: 14px;
+      color: #607086;
+    }
+
+    .hero-card {
+      background: #fff;
+      border: 1px solid #eadfca;
+      border-radius: 32px;
+      padding: 28px;
+      box-shadow: 0 24px 60px rgba(15,44,76,.12);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-card:before {
+      content: "";
+      position: absolute;
+      inset: auto -40px -40px auto;
+      width: 180px;
+      height: 180px;
+      border-radius: 999px;
+      background: rgba(214,166,79,.18);
+    }
+    .profile-row {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      margin-bottom: 22px;
+    }
+    .avatar {
+      width: 62px;
+      height: 62px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #e9eef5, #fff0c9);
+      display: grid;
+      place-items: center;
+      font-size: 30px;
+    }
+    .mini-title { font-weight: 900; color: #0f2c4c; font-size: 18px; }
+    .mini-text { color: #607086; font-size: 14px; }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 20px 0;
+    }
+    .stat {
+      background: #f7f4ee;
+      padding: 16px 10px;
+      border-radius: 18px;
+      text-align: center;
+      border: 1px solid #eee2cf;
+    }
+    .stat strong { display: block; color: #0f2c4c; font-size: 21px; }
+    .stat span { font-size: 13px; color: #607086; }
+    .check-list { list-style: none; display: grid; gap: 11px; margin-top: 20px; }
+    .check-list li {
+      background: #fbfaf7;
+      border: 1px solid #eee2cf;
+      border-radius: 16px;
+      padding: 12px 14px;
+      color: #35445a;
+    }
+
+    .section { padding: 64px 0; }
+    .section-title {
+      text-align: center;
+      max-width: 780px;
+      margin: 0 auto 34px;
+    }
+    .section-title h2 {
+      font-size: clamp(28px, 4vw, 42px);
+      color: #0f2c4c;
+      margin-bottom: 10px;
+    }
+    .section-title p { color: #607086; font-size: 18px; }
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+    .feature {
+      background: #fff;
+      border: 1px solid #eadfca;
+      border-radius: 26px;
+      padding: 24px;
+      box-shadow: 0 12px 34px rgba(15,44,76,.07);
+    }
+    .icon { font-size: 34px; margin-bottom: 12px; }
+    .feature h3 { color: #0f2c4c; margin-bottom: 8px; font-size: 20px; }
+    .feature p { color: #607086; font-size: 15px; }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .step {
+      background: #0f2c4c;
+      color: #fff;
+      border-radius: 26px;
+      padding: 26px;
+      position: relative;
+      overflow: hidden;
+    }
+    .step-number {
+      width: 42px;
+      height: 42px;
+      background: #d6a64f;
+      color: #0f2c4c;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      margin-bottom: 14px;
+    }
+    .step p { color: #dbe4ee; }
+
+    .cta-box {
+      background: linear-gradient(135deg, #0f2c4c, #163f6d);
+      color: #fff;
+      border-radius: 34px;
+      padding: 42px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+      box-shadow: 0 24px 60px rgba(15,44,76,.18);
+    }
+    .cta-box h2 { font-size: clamp(26px, 4vw, 40px); margin-bottom: 10px; }
+    .cta-box p { color: #dbe4ee; }
+    .cta-box .btn-primary { background: #1fa855; }
+
+    .notice {
+      background: #fff;
+      border: 1px solid #eadfca;
+      border-radius: 24px;
+      padding: 24px;
+      color: #607086;
+      font-size: 14px;
+    }
+    footer {
+      padding: 28px 0;
+      color: #607086;
+      text-align: center;
+      font-size: 14px;
+    }
+    .float-whatsapp {
+      position: fixed;
+      left: 20px;
+      bottom: 20px;
+      z-index: 20;
+      background: #1fa855;
+      color: #fff;
+      border-radius: 999px;
+      padding: 14px 20px;
+      font-weight: 900;
+      box-shadow: 0 14px 34px rgba(31,168,85,.35);
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid, .cta-box { grid-template-columns: 1fr; }
+      .grid-4 { grid-template-columns: repeat(2, 1fr); }
+      .steps { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 560px) {
+      .grid-4, .stats { grid-template-columns: 1fr; }
+      .hero { padding-top: 46px; }
+      .hero-card, .cta-box { border-radius: 24px; padding: 24px; }
+      .nav-inner { align-items: flex-start; }
+      .nav-cta { padding: 9px 13px; font-size: 13px; }
+      .float-whatsapp { left: 14px; right: 14px; text-align: center; }
+    }
+  </style>
 </head>
-
 <body>
+  <!--
+    使用方式：
+    1. 將下面 WHATSAPP_NUMBER 改成你的號碼，格式：國碼+號碼，不要加 + 或空格。
+       例如台灣：886912345678；阿聯酋：971501234567；沙烏地：966501234567
+    2. 如果要改預設訊息，修改 WHATSAPP_MESSAGE。
+  -->
+  <script>
+    const WHATSAPP_NUMBER = "971501234567";
+    const WHATSAPP_MESSAGE = "Hello, I would like to know more about job opportunities.";
+    const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
+    window.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll(".js-whatsapp").forEach((el) => {
+        el.setAttribute("href", whatsappLink);
+        el.setAttribute("target", "_blank");
+        el.setAttribute("rel", "noopener noreferrer");
+      });
+    });
+  </script>
 
-<section class="header">
-  <h1>全台二度就業工作資訊站</h1>
-  <p>穩定工作｜內勤外勤｜區域職缺｜專人協助說明</p>
-  <a class="btn" href="https://line.me/ti/p/你的LINE" target="_blank">LINE 了解工作內容</a>
-</section>
+  <div class="page">
+    <nav class="nav">
+      <div class="container nav-inner">
+        <div class="brand">
+          <div class="brand-badge">SG</div>
+          <div>Strive Go<br><small>فرص عمل | 工作資訊</small></div>
+        </div>
+        <a class="nav-cta js-whatsapp" href="#">تواصل عبر واتساب｜WhatsApp諮詢</a>
+      </div>
+    </nav>
 
-<div class="container">
+    <header class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">فرص بدوام جزئي وكامل｜兼職 / 正職皆可了解</div>
+          <h1>فرص عمل متنوعة تناسب أسلوب حياتك</h1>
+          <p class="hero-sub">نساعدك على فهم الخيارات المتاحة بخطوات واضحة، مع شرح كامل قبل البدء.</p>
+          <p class="hero-sub" dir="ltr">多元工作資訊整理，提供清楚說明與基本流程，讓你先了解再決定。</p>
+          <div class="hero-actions">
+            <a class="btn-primary js-whatsapp" href="#">اسأل عبر واتساب｜WhatsApp了解</a>
+            <a class="btn-secondary" href="#jobs">عرض المجالات｜查看類型</a>
+          </div>
+          <div class="trust-line">لا توجد رسوم قبل الشرح｜說明前不收任何費用｜المعلومات حسب كل حالة｜依個人情況說明</div>
+        </div>
 
-  <div class="card">
-    <h2>正在尋找新的工作方向嗎？</h2>
-    <p>
-      我們提供全台各區域工作資訊說明，包含內勤、外勤、物流配送、倉儲協助、行政客服等類型。
-      適合正在考慮二度就業、轉職，或希望了解穩定工作機會的朋友。
-    </p>
-    <span class="badge">二度就業</span>
-    <span class="badge">穩定工作</span>
-    <span class="badge">內勤職務</span>
-    <span class="badge">外勤協助</span>
-    <span class="badge">物流配送</span>
-    <span class="badge">行政客服</span>
+        <div class="hero-card">
+          <div class="profile-row">
+            <div class="avatar">💼</div>
+            <div>
+              <div class="mini-title">معلومات واضحة قبل الاختيار</div>
+              <div class="mini-text">先了解內容，再評估適不適合</div>
+            </div>
+          </div>
+          <div class="stats">
+            <div class="stat"><strong>4+</strong><span>مجالات｜類型</span></div>
+            <div class="stat"><strong>1:1</strong><span>شرح｜說明</span></div>
+            <div class="stat"><strong>سهل</strong><span>流程清楚</span></div>
+          </div>
+          <ul class="check-list">
+            <li>✓ مهام بسيطة مع شرح مسبق｜內容單純，先說明</li>
+            <li>✓ خيارات دوام جزئي أو كامل｜兼職 / 正職皆可了解</li>
+            <li>✓ تواصل مباشر عبر واتساب｜WhatsApp直接聯繫</li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <section class="section" id="jobs">
+      <div class="container">
+        <div class="section-title">
+          <h2>أنواع الفرص المتاحة｜常見工作類型</h2>
+          <p>يمكنك أولاً معرفة المجالات، ثم اختيار ما يناسب وقتك وخبرتك.</p>
+          <p>可先了解不同類型，再依時間、經驗與地區評估。</p>
+        </div>
+        <div class="grid-4">
+          <div class="feature">
+            <div class="icon">📱</div>
+            <h3>دعم عبر الإنترنت</h3>
+            <p>مساعدة في الردود، تنظيم الطلبات، ومتابعة المعلومات.</p>
+            <p>線上客服、訂單整理、資訊回覆協助。</p>
+          </div>
+          <div class="feature">
+            <div class="icon">📝</div>
+            <h3>إدخال وتنظيم البيانات</h3>
+            <p>ترتيب ملفات، إدخال معلومات، ومراجعة بيانات أساسية.</p>
+            <p>資料輸入、資料整理、基本紀錄協助。</p>
+          </div>
+          <div class="feature">
+            <div class="icon">🚚</div>
+            <h3>خدمات ميدانية</h3>
+            <p>مهام خارجية، توصيل، متابعة نقاط أو مواقع حسب المنطقة.</p>
+            <p>外勤、配送、區域服務與現場紀錄。</p>
+          </div>
+          <div class="feature">
+            <div class="icon">🤝</div>
+            <h3>مساعدة يومية</h3>
+            <p>مساندة في مهام بسيطة مع شرح واضح قبل التنفيذ.</p>
+            <p>日常任務協助，流程有人說明。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>كيف تبدأ؟｜如何開始？</h2>
+          <p>ثلاث خطوات بسيطة لمعرفة التفاصيل.</p>
+          <p>三個步驟，先了解再決定。</p>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <h3>تواصل معنا</h3>
+            <p>اضغط زر واتساب وأرسل رسالة للاستفسار.</p>
+            <p>點擊 WhatsApp 按鈕，先詢問內容。</p>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <h3>اختر المجال</h3>
+            <p>نوضح لك الأنواع المتاحة حسب حالتك.</p>
+            <p>依你的情況說明可了解的類型。</p>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <h3>احصل على التفاصيل</h3>
+            <p>تعرف على الخطوات، المتطلبات، وطريقة المتابعة.</p>
+            <p>了解流程、條件與後續安排。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-box">
+          <div>
+            <h2>هل ترغب في معرفة الفرص المناسبة لك؟</h2>
+            <p>تواصل معنا الآن، وسيقوم شخص مختص بتوضيح المعلومات الأساسية لك.</p>
+            <p>想了解適合你的工作資訊？立即聯繫，將由專人提供基本說明。</p>
+          </div>
+          <a class="btn-primary js-whatsapp" href="#">فتح واتساب｜開啟WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="notice">
+          <strong>تنبيه｜提醒：</strong><br />
+          هذه الصفحة مخصصة لتقديم معلومات عامة حول فرص العمل والخيارات المتاحة، ولا تمثل ضمان توظيف أو قبول مباشر. التفاصيل الفعلية تختلف حسب المنطقة، الوقت، والخبرة الشخصية. لا ترسل أي رسوم أو معلومات حساسة قبل التأكد من التفاصيل.
+          <br /><br />
+          本頁內容為一般工作資訊整理與說明，非保證錄用或直接聘僱承諾。實際內容依地區、時間、經驗與個人情況而定。未確認完整資訊前，請勿提供費用或敏感資料。
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © 2026 Strive Go. All rights reserved.｜工作資訊說明平台
+    </footer>
   </div>
 
-  <div class="card">
-    <h2>目前工作類型</h2>
-    <div class="grid">
-
-      <div class="box">
-        <h3>外勤配送協助</h3>
-        <ul>
-          <li>文件、物品配送協助</li>
-          <li>依照區域安排工作內容</li>
-          <li>流程清楚，容易熟悉</li>
-        </ul>
-      </div>
-
-      <div class="box">
-        <h3>物流倉儲支援</h3>
-        <ul>
-          <li>包裹整理、分類、出貨協助</li>
-          <li>基本倉儲作業支援</li>
-          <li>工作內容明確</li>
-        </ul>
-      </div>
-
-      <div class="box">
-        <h3>內勤行政協助</h3>
-        <ul>
-          <li>資料整理與基本文書處理</li>
-          <li>訊息回覆與客服協助</li>
-          <li>適合細心、穩定者</li>
-        </ul>
-      </div>
-
-      <div class="box">
-        <h3>區域任務協助</h3>
-        <ul>
-          <li>依指定流程完成任務</li>
-          <li>內容單純，專人說明</li>
-          <li>可先了解再評估</li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="card">
-    <h2>各區域工作資訊</h2>
-    <div class="grid">
-
-      <div class="box">
-        <h3>北部地區</h3>
-        <p>台北、新北、基隆、桃園、新竹</p>
-        <p>外勤配送、物流支援、行政協助</p>
-        <a class="btn" href="https://line.me/ti/p/你的LINE" target="_blank">了解北部職缺</a>
-      </div>
-
-      <div class="box">
-        <h3>中部地區</h3>
-        <p>苗栗、台中、彰化、南投</p>
-        <p>倉儲作業、配送協助、區域支援</p>
-        <a class="btn" href="https://line.me/ti/p/你的LINE" target="_blank">了解中部職缺</a>
-      </div>
-
-      <div class="box">
-        <h3>南部地區</h3>
-        <p>雲林、嘉義、台南、高雄、屏東</p>
-        <p>物流配送、外勤協助、內勤客服</p>
-        <a class="btn" href="https://line.me/ti/p/你的LINE" target="_blank">了解南部職缺</a>
-      </div>
-
-      <div class="box">
-        <h3>東部與其他地區</h3>
-        <p>宜蘭、花蓮、台東、離島地區</p>
-        <p>可依所在地協助了解安排方式</p>
-        <a class="btn" href="https://line.me/ti/p/你的LINE" target="_blank">了解其他地區</a>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="card">
-    <h2>了解流程</h2>
-    <ul>
-      <li>選擇你所在的區域</li>
-      <li>點擊 LINE 聯繫專人</li>
-      <li>了解工作內容、地區與安排方式</li>
-      <li>依照自身狀況評估是否進一步了解</li>
-    </ul>
-  </div>
-
-  <div class="card line-box">
-    <h2>想了解適合你的工作嗎？</h2>
-    <p>點擊下方 LINE，將有專人為你說明目前可了解的工作內容。</p>
-    <a class="btn" href="https://line.me/ti/p/你的LINE" target="_blank">立即 LINE 詢問</a>
-  </div>
-
-  <div class="card notice">
-    <strong>提醒：</strong><br>
-    本頁面為一般工作資訊說明，實際工作內容、地區與安排方式以專人說明為準。
-    本職缺無需任何費用或押金，非投資性質，不保證錄取或收入。
-  </div>
-
-</div>
-
-<div class="footer">
-  © 2026 全台工作資訊說明頁
-</div>
-
+  <a class="float-whatsapp js-whatsapp" href="#">💬 واتساب｜WhatsApp</a>
 </body>
 </html>
