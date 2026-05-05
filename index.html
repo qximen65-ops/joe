@@ -10,7 +10,7 @@ body{
   margin:0;
   font-family:"Noto Sans TC", Arial, sans-serif;
   background:#f4f6f9;
-  color:#222;
+  color:#1f2937;
   line-height:1.7;
 }
 
@@ -24,43 +24,55 @@ body{
 .hero h1{
   color:#d4af37;
   font-size:42px;
-  margin-bottom:12px;
+  margin:0 0 14px;
 }
 
 .hero p{
   max-width:760px;
-  margin:0 auto 25px;
+  margin:0 auto 26px;
   font-size:18px;
+  color:#f9fafb;
 }
 
 .btn{
   display:inline-block;
   background:#d4af37;
-  color:#111;
+  color:#111827;
   padding:14px 34px;
   border-radius:10px;
   text-decoration:none;
   font-weight:bold;
+  font-size:17px;
 }
 
 .section{
   max-width:1000px;
   margin:30px auto;
-  background:#fff;
+  background:#ffffff;
   padding:32px 24px;
   border-radius:16px;
   box-shadow:0 6px 22px rgba(0,0,0,0.08);
+  color:#1f2937;
 }
 
 .section h2{
+  color:#111827;
   border-left:6px solid #d4af37;
   padding-left:12px;
   margin-top:0;
 }
 
+.section p{
+  color:#374151;
+}
+
 .highlight{
   background:#fff8e1;
   border:1px solid #ead58a;
+}
+
+.highlight strong{
+  color:#8a5a00;
 }
 
 .grid{
@@ -71,6 +83,8 @@ body{
 
 .card{
   background:#f9fafb;
+  color:#111827;
+  font-weight:600;
   padding:18px;
   border-radius:12px;
   border:1px solid #e5e7eb;
@@ -84,6 +98,8 @@ input, select, textarea{
   border-radius:9px;
   font-size:16px;
   box-sizing:border-box;
+  color:#111827;
+  background:white;
 }
 
 button{
@@ -117,13 +133,13 @@ button{
   padding:18px;
   border-radius:12px;
   font-size:14px;
-  color:#555;
+  color:#374151;
 }
 
 footer{
   text-align:center;
   padding:30px 15px;
-  color:#777;
+  color:#6b7280;
   font-size:13px;
 }
 </style>
@@ -132,18 +148,6 @@ footer{
 <body>
 
 <div class="hero">
-  
-  <img src="photo_2026-05-05_19-29-57.jpg"
-     style="
-       width:100%;
-       max-width:600px;
-       height:auto;
-       display:block;
-       margin:0 auto 20px;
-       border-radius:12px;
-       box-shadow:0 6px 25px rgba(0,0,0,0.25);
-     ">
-  
   <h1>仲信融資</h1>
   <p>
     提供信貸、房貸、車貸與資金規劃資訊說明，
@@ -152,6 +156,7 @@ footer{
   <a href="https://line.me/R/ti/p/~cindy00723" target="_blank" class="btn">
     加 LINE 了解
   </a>
+  
 <div style="text-align:center;">
 
   <img src="84fff50d-d5c8-4cb3-87ac-8394a6a75315.png"
@@ -159,14 +164,13 @@ footer{
          width:100%;
          max-width:1100px;
          height:auto;
-         display:inline-block;
-         margin:30px auto;
-         border-radius:16px;
-         box-shadow:0 10px 40px rgba(0,0,0,0.25);
+         display:block;
+         margin:40px auto;
+         border-radius:18px;
+         box-shadow:0 12px 40px rgba(0,0,0,0.25);
        ">
 
 </div>
-  
 <div class="section highlight">
   <h2>專人協助說明</h2>
   <p>
@@ -221,7 +225,7 @@ footer{
 
     <textarea id="msg" rows="4" placeholder="想了解的內容"></textarea>
 
-    <button type="submit">送出資料並加 LINE</button>
+    <button type="submit">送出資料</button>
   </form>
 
   <a class="line-btn" href="https://line.me/R/ti/p/~cindy00723" target="_blank">
@@ -231,7 +235,8 @@ footer{
 
 <div class="section">
   <div class="notice">
-    【重要提醒】本頁提供一般資金規劃與貸款資訊說明，實際條件、核准結果皆需依合作單位審核結果與正式文件為準。
+    【重要提醒】本頁提供一般資金規劃與貸款資訊說明，亦不保證核准、額度。實際條件、核准結果
+    皆需依合作單位審核結果與正式文件為準。
   </div>
 </div>
 
@@ -248,7 +253,7 @@ function sendToLine() {
   var msg = document.getElementById("msg").value.trim();
 
   var text =
-    "您好，我想了解資金規劃資訊。" + "\n\n" +
+    "您好，我想了解仲信融資資訊。" + "\n\n" +
     "姓名：" + name + "\n" +
     "手機：" + phone + "\n" +
     "LINE ID：" + (lineid || "未填寫") + "\n" +
@@ -256,7 +261,6 @@ function sendToLine() {
     "備註：" + (msg || "未填寫");
 
   var lineUrl = "https://line.me/R/ti/p/~cindy00723?text=" + encodeURIComponent(text);
-
   window.open(lineUrl, "_blank");
 }
 </script>
