@@ -3,86 +3,102 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>資金規劃資訊說明</title>
+  <title>仲信融資｜資金規劃資訊說明</title>
+
   <style>
     body {
       margin: 0;
       font-family: "Noto Sans TC", Arial, sans-serif;
-      background: #f6f6f6;
+      background: #f5f5f5;
       color: #222;
+      line-height: 1.7;
     }
 
     .hero {
-      background: linear-gradient(135deg, #1f1f1f, #3a3a3a);
+      background: linear-gradient(135deg, #1f1f1f, #3b3b3b);
       color: white;
-      padding: 50px 20px;
+      padding: 60px 20px;
       text-align: center;
     }
 
     .hero h1 {
-      font-size: 32px;
-      margin-bottom: 12px;
+      font-size: 38px;
+      margin: 0 0 12px;
+      color: #d4af37;
+    }
+
+    .hero h2 {
+      font-size: 26px;
+      margin: 0 0 15px;
     }
 
     .hero p {
-      font-size: 18px;
-      line-height: 1.7;
-      max-width: 720px;
+      max-width: 760px;
       margin: auto;
+      font-size: 18px;
     }
 
     .btn {
       display: inline-block;
-      margin-top: 25px;
-      padding: 14px 30px;
+      margin-top: 26px;
+      padding: 14px 34px;
       background: #d4af37;
       color: #111;
       text-decoration: none;
-      border-radius: 8px;
+      border-radius: 10px;
       font-weight: bold;
+      font-size: 17px;
     }
 
     .section {
-      max-width: 960px;
-      margin: 30px auto;
-      background: white;
-      padding: 30px 22px;
-      border-radius: 14px;
+      max-width: 980px;
+      margin: 28px auto;
+      background: #fff;
+      padding: 30px 24px;
+      border-radius: 16px;
       box-shadow: 0 4px 18px rgba(0,0,0,0.08);
     }
 
     .section h2 {
-      color: #222;
-      border-left: 5px solid #d4af37;
+      border-left: 6px solid #d4af37;
       padding-left: 12px;
+      margin-top: 0;
     }
 
-    .items {
+    .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 15px;
-      margin-top: 20px;
+      gap: 16px;
+      margin-top: 18px;
     }
 
-    .item {
+    .card {
       background: #fafafa;
-      padding: 16px;
-      border-radius: 10px;
+      padding: 18px;
+      border-radius: 12px;
       border: 1px solid #eee;
     }
 
-    .card-img {
-      width: 100%;
-      border-radius: 12px;
-      margin-top: 15px;
+    .scene {
+      background: linear-gradient(135deg, #fff8df, #ffffff);
+      border: 1px solid #ead58a;
     }
 
-    form input, form select, form textarea {
+    .scene-title {
+      font-size: 22px;
+      font-weight: bold;
+      color: #7a5a00;
+      margin-bottom: 10px;
+    }
+
+    form input,
+    form select,
+    form textarea {
       width: 100%;
       padding: 13px;
-      margin: 8px 0 15px;
+      margin: 8px 0 16px;
       border: 1px solid #ccc;
-      border-radius: 8px;
+      border-radius: 9px;
       font-size: 16px;
       box-sizing: border-box;
     }
@@ -93,66 +109,97 @@
       background: #222;
       color: white;
       border: none;
-      border-radius: 8px;
+      border-radius: 9px;
       font-size: 18px;
       font-weight: bold;
       cursor: pointer;
     }
 
+    .line-btn {
+      display: inline-block;
+      background: #06C755;
+      color: white;
+      padding: 14px 30px;
+      border-radius: 9px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 12px;
+    }
+
     .notice {
+      background: #fff9e6;
+      border: 1px solid #ead58a;
+      padding: 18px;
+      border-radius: 12px;
       font-size: 14px;
       color: #555;
-      line-height: 1.8;
-      background: #fff9e6;
-      padding: 18px;
-      border-radius: 10px;
-      border: 1px solid #f0d98c;
     }
 
     footer {
       text-align: center;
-      font-size: 13px;
+      padding: 28px 15px;
       color: #777;
-      padding: 30px 15px;
+      font-size: 13px;
     }
   </style>
 </head>
+
 <body>
 
   <div class="hero">
-    <h1>資金規劃資訊說明</h1>
+    <h1>仲信融資</h1>
+    <h2>資金規劃與貸款資訊說明</h2>
     <p>
-      提供一般信貸、房貸、車貸與債務整合資訊說明，  
-      協助您了解申請流程、準備資料與可行方向。
+      專人協助了解個人信貸、房屋貸款、汽機車貸款與債務整合流程，
+      依照您的實際狀況說明可行方向，協助整理資料與申請流程。
     </p>
     <a href="#form" class="btn">了解申請資訊</a>
   </div>
 
+  <div class="section scene">
+    <div class="scene-title">專人一對一協助，流程清楚更安心</div>
+    <p>
+      仲信融資提供一般資金規劃資訊說明，由專人協助您了解不同貸款項目的申請條件、
+      需要準備的基本資料，以及後續送件流程。若您不確定自己適合哪一種方式，
+      可先留下基本資訊，將由專人協助初步了解。
+    </p>
+    <p>
+      服務過程中，業務人員會協助您確認資料是否完整，例如身分資料、收入狀況、
+      申請用途與想了解的項目，讓整體流程更清楚、減少來回溝通時間。
+    </p>
+  </div>
+
   <div class="section">
-    <h2>服務項目</h2>
-    <div class="items">
-      <div class="item">個人信貸資訊說明</div>
-      <div class="item">房屋貸款流程說明</div>
-      <div class="item">汽機車貸款資訊</div>
-      <div class="item">債務整合方向說明</div>
-      <div class="item">企業資金規劃</div>
-      <div class="item">特殊信用狀況可先了解</div>
+    <h2>可了解的服務項目</h2>
+    <div class="grid">
+      <div class="card">個人信貸資訊說明</div>
+      <div class="card">小額資金需求規劃</div>
+      <div class="card">房屋貸款流程說明</div>
+      <div class="card">汽機車貸款資訊</div>
+      <div class="card">債務整合方向說明</div>
+      <div class="card">企業資金週轉規劃</div>
     </div>
   </div>
 
   <div class="section">
-    <h2>專人資訊</h2>
-    <p>如需進一步了解，可參考以下資訊：</p>
-    <img src="card.jpg" alt="貸款資訊名片" class="card-img">
-  </div>
-
-  <div class="section">
-    <h2>申請流程</h2>
-    <div class="items">
-      <div class="item">1. 留下基本聯絡方式</div>
-      <div class="item">2. 專人說明可了解方向</div>
-      <div class="item">3. 協助整理申請資料</div>
-      <div class="item">4. 依條件評估後續流程</div>
+    <h2>協助流程</h2>
+    <div class="grid">
+      <div class="card">
+        <strong>1. 留下基本資訊</strong><br>
+        填寫姓名、電話與想了解的項目。
+      </div>
+      <div class="card">
+        <strong>2. 專人初步說明</strong><br>
+        依照您的需求說明可了解的方向。
+      </div>
+      <div class="card">
+        <strong>3. 協助整理資料</strong><br>
+        協助確認申請流程中常見所需資料。
+      </div>
+      <div class="card">
+        <strong>4. 後續條件評估</strong><br>
+        實際結果依合作單位審核為準。
+      </div>
     </div>
   </div>
 
@@ -183,16 +230,35 @@
 
       <button type="submit">送出資訊</button>
     </form>
+
+    <div style="text-align:center; margin-top:20px;">
+      <p>也可以直接透過 LINE 了解：</p>
+      <a class="line-btn" href="https://line.me/R/ti/p/cindy00723" target="_blank">
+        加 LINE 了解
+      </a>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>為什麼選擇仲信融資</h2>
+    <div class="grid">
+      <div class="card">流程說明清楚</div>
+      <div class="card">專人協助整理資料</div>
+      <div class="card">多項資金規劃方向</div>
+      <div class="card">重視個人資料保護</div>
+    </div>
   </div>
 
   <div class="section">
     <div class="notice">
-      【重要提醒】本頁提供一般資金規劃與貸款資訊說明，非銀行、非放款單位，亦不保證核准、額度、利率或撥款時間。實際條件需依合作單位審核結果為準。請勿提供金融卡、密碼、簡訊驗證碼或預繳任何費用。
+      【重要提醒】本頁提供一般資金規劃與貸款資訊說明，非銀行、非放款單位，亦不保證核准、
+      額度、利率或撥款時間。實際條件、核准結果與相關費用，皆需依合作單位審核結果與正式文件為準。
+      請勿提供金融卡、密碼、簡訊驗證碼，亦請勿預繳任何不明費用。
     </div>
   </div>
 
   <footer>
-    © 資金規劃資訊說明｜本頁僅供資訊諮詢使用
+    © 仲信融資｜資金規劃資訊說明｜本頁僅供一般資訊諮詢使用
   </footer>
 
 </body>
