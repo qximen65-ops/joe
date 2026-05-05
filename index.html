@@ -24,11 +24,11 @@ body{
 .hero h1{
   color:#d4af37;
   font-size:42px;
-  margin:0 0 14px;
+  margin:0 0 15px;
 }
 
 .hero p{
-  max-width:760px;
+  max-width:780px;
   margin:0 auto 26px;
   font-size:18px;
   color:#f9fafb;
@@ -48,7 +48,7 @@ body{
 .section{
   max-width:1000px;
   margin:30px auto;
-  background:#ffffff;
+  background:white;
   padding:32px 24px;
   border-radius:16px;
   box-shadow:0 6px 22px rgba(0,0,0,0.08);
@@ -90,7 +90,7 @@ body{
   border:1px solid #e5e7eb;
 }
 
-input, select, textarea{
+input,select,textarea{
   width:100%;
   padding:13px;
   margin:8px 0 16px;
@@ -157,7 +157,19 @@ footer{
     加 LINE 了解
   </a>
 </div>
+ <img src="84fff50d-d5c8-4cb3-87ac-8394a6a75315.png"
+       style="
+         width:100%;
+         max-width:1100px;
+         height:auto;
+         display:block;
+         margin:40px auto;
+         border-radius:18px;
+         box-shadow:0 12px 40px rgba(0,0,0,0.25);
+       ">
 
+</div>
+  
 <div class="section highlight">
   <h2>專人協助說明</h2>
   <p>
@@ -212,7 +224,7 @@ footer{
 
     <textarea id="msg" rows="4" placeholder="想了解的內容"></textarea>
 
-    <button type="submit">送出資料並加 LINE</button>
+    <button type="submit">送出資料</button>
   </form>
 
   <a class="line-btn" href="https://line.me/R/ti/p/~cindy00723" target="_blank">
@@ -222,10 +234,8 @@ footer{
 
 <div class="section">
   <div class="notice">
-    【重要提醒】本頁提供一般資金規劃與貸款資訊說明，非銀行、非放款單位，
-    亦不保證核准、額度、利率或撥款時間。實際條件、核准結果與相關費用，
-    皆需依合作單位審核結果與正式文件為準。請勿提供金融卡、密碼、簡訊驗證碼，
-    亦請勿預繳任何不明費用。
+    【重要提醒】本頁提供一般資金規劃與貸款資訊說明，實際條件
+    皆需依合作單位審核結果與正式文件為準。
   </div>
 </div>
 
@@ -242,7 +252,7 @@ function sendToLine() {
   var msg = document.getElementById("msg").value.trim();
 
   var text =
-    "您好，我想了解仲信融資資訊。" + "\n\n" +
+    "您好，我想了解仲信融資資訊。\n\n" +
     "姓名：" + name + "\n" +
     "手機：" + phone + "\n" +
     "LINE ID：" + (lineid || "未填寫") + "\n" +
