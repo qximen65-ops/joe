@@ -8,15 +8,15 @@
 <style>
 body{
   margin:0;
-  font-family:"Noto Sans TC",Arial;
+  font-family:"Noto Sans TC", Arial, sans-serif;
   background:#f4f6f9;
   color:#222;
+  line-height:1.7;
 }
 
-/* 主視覺 */
 .hero{
   background:linear-gradient(135deg,#0f172a,#1e293b);
-  color:#fff;
+  color:white;
   text-align:center;
   padding:70px 20px;
 }
@@ -24,46 +24,49 @@ body{
 .hero h1{
   color:#d4af37;
   font-size:42px;
-  margin-bottom:10px;
+  margin-bottom:12px;
 }
 
 .hero p{
-  max-width:700px;
-  margin:auto;
+  max-width:760px;
+  margin:0 auto 25px;
   font-size:18px;
-  color:#e5e7eb;
 }
 
 .btn{
   display:inline-block;
-  margin-top:25px;
-  padding:14px 34px;
   background:#d4af37;
   color:#111;
-  text-decoration:none;
+  padding:14px 34px;
   border-radius:10px;
+  text-decoration:none;
   font-weight:bold;
 }
 
-/* 區塊 */
 .section{
   max-width:1000px;
   margin:30px auto;
   background:#fff;
-  padding:30px;
+  padding:32px 24px;
   border-radius:16px;
-  box-shadow:0 5px 20px rgba(0,0,0,0.08);
+  box-shadow:0 6px 22px rgba(0,0,0,0.08);
 }
 
 .section h2{
   border-left:6px solid #d4af37;
-  padding-left:10px;
+  padding-left:12px;
+  margin-top:0;
+}
+
+.highlight{
+  background:#fff8e1;
+  border:1px solid #ead58a;
 }
 
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:15px;
+  gap:16px;
 }
 
 .card{
@@ -73,112 +76,105 @@ body{
   border:1px solid #e5e7eb;
 }
 
-/* 強調區 */
-.highlight{
-  background:#fff8e1;
-  border:1px solid #f3d98c;
-}
-
-.highlight strong{
-  color:#7a5a00;
-}
-
-/* 表單 */
-form input,form select,form textarea{
+input, select, textarea{
   width:100%;
-  padding:12px;
-  margin:8px 0 15px;
-  border-radius:8px;
-  border:1px solid #ccc;
+  padding:13px;
+  margin:8px 0 16px;
+  border:1px solid #cbd5e1;
+  border-radius:9px;
+  font-size:16px;
+  box-sizing:border-box;
 }
 
-form button{
+button{
   width:100%;
-  padding:14px;
+  padding:15px;
   background:#111827;
-  color:#fff;
+  color:white;
   border:none;
-  border-radius:8px;
+  border-radius:9px;
   font-size:18px;
+  font-weight:bold;
+  cursor:pointer;
 }
 
-/* LINE */
 .line-btn{
-  display:inline-block;
+  display:block;
+  text-align:center;
   background:#06C755;
-  color:#fff;
-  padding:14px 30px;
-  border-radius:8px;
+  color:white;
+  padding:15px;
+  border-radius:9px;
   text-decoration:none;
   font-weight:bold;
+  font-size:18px;
+  margin-top:18px;
 }
 
-/* 警語 */
 .notice{
   background:#fff3cd;
-  padding:18px;
-  border-radius:10px;
   border:1px solid #ffe69c;
+  padding:18px;
+  border-radius:12px;
   font-size:14px;
+  color:#555;
 }
 
-/* footer */
 footer{
   text-align:center;
-  padding:25px;
+  padding:30px 15px;
+  color:#777;
   font-size:13px;
-  color:#666;
 }
 </style>
-
 </head>
 
 <body>
 
 <div class="hero">
-
   
-
+  <img src="photo_2026-05-05_19-29-57.jpg"
+     style="
+       width:100%;
+       max-width:600px;
+       height:auto;
+       display:block;
+       margin:0 auto 20px;
+       border-radius:12px;
+       box-shadow:0 6px 25px rgba(0,0,0,0.25);
+     ">
+  
   <h1>仲信融資</h1>
-
   <p>
     提供信貸、房貸、車貸與資金規劃資訊說明，
     協助了解流程、整理資料與評估可行方向。
   </p>
-
-  <a href="https://line.me/R/ti/p/~cindy00723"
-     target="_blank"
-     class="btn"
-     onclick="fbq('track','Contact')">
-    加LINE了解
+  <a href="https://line.me/R/ti/p/~cindy00723" target="_blank" class="btn">
+    加 LINE 了解
   </a>
+<div style="text-align:center;">
+
+  <img src="84fff50d-d5c8-4cb3-87ac-8394a6a75315.png"
+       style="
+         width:100%;
+         max-width:1100px;
+         height:auto;
+         display:inline-block;
+         margin:30px auto;
+         border-radius:16px;
+         box-shadow:0 10px 40px rgba(0,0,0,0.25);
+       ">
 
 </div>
-    提供信貸、房貸、車貸與資金規劃資訊說明，  
-    協助您了解流程、整理資料與評估可行方向。
-  </p>
-<img src="photo_2026-05-05_19-29-57.jpg"
-     style="width:100%; max-width:1000px; height:auto; border-radius:12px; margin:0 auto 20px; display:block;">
-<a href="https://line.me/R/ti/p/~cindy00723"
-   target="_blank"
-   class="btn"
-   onclick="fbq('track','Contact')"
-   style="display:block; text-align:center; font-size:18px; padding:14px;">
-  👉 立即加LINE了解（專人協助）
-</a>
-</div>
-
+  
 <div class="section highlight">
- <img src="84fff50d-d5c8-4cb3-87ac-8394a6a75315.png"
-     style="width:100%; height:auto; max-height:none; object-fit:contain; border-radius:10px; margin-bottom:15px;">
   <h2>專人協助說明</h2>
   <p>
-    我們提供一般資金規劃資訊，由專人協助您了解不同貸款項目與申請流程，
+    仲信融資提供一般資金規劃資訊，由專人協助了解不同貸款項目與申請流程，
     協助整理基本資料與方向說明，讓整體流程更加清楚。
   </p>
-
   <p>
-    <strong>警示戶可協助了解情況與可行處理方向</strong>，  
+    <strong>警示戶可協助了解情況與可行處理方向。</strong>
     若您有特殊信用或帳戶狀況，也可先了解目前情況與可能方向。
   </p>
 </div>
@@ -187,11 +183,10 @@ footer{
   <h2>服務項目</h2>
   <div class="grid">
     <div class="card">個人信貸資訊說明</div>
-    <div class="card">房屋貸款流程</div>
-    <div class="card">汽機車貸款</div>
-    <div class="card">債務整合規劃</div>
-    <div class="card">企業資金週轉</div>
-    <div class="card">特殊信用狀況了解</div>
+    <div class="card">房屋貸款流程說明</div>
+    <div class="card">汽機車貸款資訊</div>
+    <div class="card">債務整合方向說明</div>
+    <div class="card">企業資金週轉規劃</div>
     <div class="card">警示戶可協助了解情況與可行處理方向</div>
   </div>
 </div>
@@ -199,51 +194,72 @@ footer{
 <div class="section">
   <h2>協助流程</h2>
   <div class="grid">
-    <div class="card">1. 填寫基本資訊</div>
+    <div class="card">1. 留下基本資訊</div>
     <div class="card">2. 專人聯繫說明</div>
-    <div class="card">3. 評估可行方向</div>
+    <div class="card">3. 了解可行方向</div>
     <div class="card">4. 協助整理資料</div>
   </div>
 </div>
 
 <div class="section">
   <h2>留下資訊</h2>
-  <form>
-    <input type="text" placeholder="姓名">
-    <input type="tel" placeholder="手機">
-    <input type="text" placeholder="LINE ID（選填）">
 
-    <select>
-      <option>個人信貸</option>
-      <option>房屋貸款</option>
-      <option>汽機車貸款</option>
-      <option>債務整合</option>
-      <option>警示戶狀況了解</option>
+  <form onsubmit="sendToLine(); return false;">
+    <input id="name" type="text" placeholder="姓名" required>
+    <input id="phone" type="tel" placeholder="手機" required>
+    <input id="lineid" type="text" placeholder="LINE ID（選填）">
+
+    <select id="type" required>
+      <option value="個人信貸">個人信貸</option>
+      <option value="房屋貸款">房屋貸款</option>
+      <option value="汽機車貸款">汽機車貸款</option>
+      <option value="債務整合">債務整合</option>
+      <option value="企業資金">企業資金</option>
+      <option value="警示戶狀況了解">警示戶狀況了解</option>
+      <option value="其他資訊">其他資訊</option>
     </select>
 
-    <textarea rows="4" placeholder="想了解的內容"></textarea>
+    <textarea id="msg" rows="4" placeholder="想了解的內容"></textarea>
 
-    <button>送出資訊</button>
+    <button type="submit">送出資料並加 LINE</button>
   </form>
 
-  <div style="text-align:center;margin-top:20px;">
-    <a href="https://line.me/R/ti/p/~cindy00723" target="_blank" class="line-btn">
-      LINE快速諮詢
-    </a>
-  </div>
+  <a class="line-btn" href="https://line.me/R/ti/p/~cindy00723" target="_blank">
+    LINE 快速諮詢
+  </a>
 </div>
 
 <div class="section">
   <div class="notice">
-    【重要提醒】本頁提供一般貸款資訊說明，非銀行及非放款單位，
-    不保證核准、額度或利率。實際條件依合作單位審核為準，
-    請勿提供金融卡、密碼或預繳費用。
+    【重要提醒】本頁提供一般資金規劃與貸款資訊說明，實際條件、核准結果皆需依合作單位審核結果與正式文件為準。
   </div>
 </div>
 
 <footer>
-  © 仲信融資｜本頁僅供資訊說明使用
+  © 仲信融資｜資金規劃資訊說明｜本頁僅供一般資訊諮詢使用
 </footer>
+
+<script>
+function sendToLine() {
+  var name = document.getElementById("name").value.trim();
+  var phone = document.getElementById("phone").value.trim();
+  var lineid = document.getElementById("lineid").value.trim();
+  var type = document.getElementById("type").value;
+  var msg = document.getElementById("msg").value.trim();
+
+  var text =
+    "您好，我想了解資金規劃資訊。" + "\n\n" +
+    "姓名：" + name + "\n" +
+    "手機：" + phone + "\n" +
+    "LINE ID：" + (lineid || "未填寫") + "\n" +
+    "需求項目：" + type + "\n" +
+    "備註：" + (msg || "未填寫");
+
+  var lineUrl = "https://line.me/R/ti/p/~cindy00723?text=" + encodeURIComponent(text);
+
+  window.open(lineUrl, "_blank");
+}
+</script>
 
 </body>
 </html>
