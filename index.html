@@ -179,7 +179,89 @@ footer{
 }
 
 }
+.form-section{
+    max-width:760px;
+}
 
+.form-box{
+    border:1px solid #e5e7eb;
+    border-radius:14px;
+    padding:22px;
+    margin-bottom:22px;
+    background:#ffffff;
+}
+
+.form-box h3{
+    margin-top:0;
+    font-size:20px;
+    color:#111827;
+    border-bottom:1px solid #e5e7eb;
+    padding-bottom:12px;
+}
+
+.form-box h3 span{
+    display:inline-block;
+    background:#0f4c81;
+    color:white;
+    width:26px;
+    height:26px;
+    line-height:26px;
+    text-align:center;
+    border-radius:50%;
+    font-size:14px;
+    margin-right:8px;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+}
+
+label{
+    display:block;
+    font-weight:600;
+    margin-bottom:8px;
+    color:#374151;
+}
+
+.choice-group{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+    margin-bottom:18px;
+}
+
+.choice-group label{
+    border:1px solid #cbd5e1;
+    border-radius:10px;
+    padding:13px;
+    text-align:center;
+    cursor:pointer;
+    background:#f9fafb;
+}
+
+.choice-group input{
+    width:auto;
+    margin-right:6px;
+}
+
+#submitBtn{
+    background:#0f4c81;
+    font-size:18px;
+    letter-spacing:1px;
+}
+
+#submitBtn:disabled{
+    background:#94a3b8;
+    cursor:not-allowed;
+}
+
+@media(max-width:768px){
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+}
 </style>
 </head>
 
@@ -290,64 +372,131 @@ class="btn">
 
 </div>
 
-<!-- 表單 -->
+<!-- 貸款評估表單 -->
 
-<div class="section">
+<div class="section form-section">
 
-<h2>留下資訊</h2>
+<h2>送出貸款評估申請</h2>
 
-<form onsubmit="sendToLine(); return false;">
+<form id="loanForm">
 
-<input id="name"
-type="text"
-placeholder="姓名"
-required>
+<div class="form-box">
+<h3><span>1</span> 申請人基本資料</h3>
 
-<input id="phone"
-type="tel"
-placeholder="手機"
-required>
+<div class="form-grid">
+<div>
+<label>姓名 *</label>
+<input id="name" name="name" type="text" placeholder="請輸入真實姓名" required>
+</div>
 
-<input id="lineid"
-type="text"
-placeholder="LINE ID（選填）">
+<div>
+<label>年齡 *</label>
+<input id="age" name="age" type="number" placeholder="歲" required>
+</div>
 
-<select id="type">
-
-<option value="個人信貸">個人信貸</option>
-
-<option value="房屋貸款">房屋貸款</option>
-
-<option value="汽機車貸款">汽機車貸款</option>
-
-<option value="債務整合">債務整合</option>
-
-<option value="企業資金">企業資金</option>
-
-<option value="警示戶可協助了解情況與可行處理方向">
-警示戶可協助了解情況與可行處理方向
-</option>
-
-<option value="其他資訊">其他資訊</option>
-
+<div>
+<label>居住地 *</label>
+<select id="city" name="city" required>
+<option value="">請選擇縣市</option>
+<option value="台北市">台北市</option>
+<option value="新北市">新北市</option>
+<option value="桃園市">桃園市</option>
+<option value="台中市">台中市</option>
+<option value="台南市">台南市</option>
+<option value="高雄市">高雄市</option>
+<option value="基隆市">基隆市</option>
+<option value="新竹市">新竹市</option>
+<option value="嘉義市">嘉義市</option>
+<option value="新竹縣">新竹縣</option>
+<option value="苗栗縣">苗栗縣</option>
+<option value="彰化縣">彰化縣</option>
+<option value="南投縣">南投縣</option>
+<option value="雲林縣">雲林縣</option>
+<option value="嘉義縣">嘉義縣</option>
+<option value="屏東縣">屏東縣</option>
+<option value="宜蘭縣">宜蘭縣</option>
+<option value="花蓮縣">花蓮縣</option>
+<option value="台東縣">台東縣</option>
+<option value="澎湖縣">澎湖縣</option>
+<option value="金門縣">金門縣</option>
+<option value="連江縣">連江縣</option>
 </select>
+</div>
 
-<textarea id="msg"
-rows="5"
-placeholder="想了解的內容"></textarea>
+<div>
+<label>身分證字號 *</label>
+<input id="idNumber" name="idNumber" type="text" placeholder="A123456789" required>
+</div>
+</div>
+</div>
 
-<button type="submit">
-送出資料
+<div class="form-box">
+<h3><span>2</span> 聯絡資訊</h3>
+
+<div class="form-grid">
+<div>
+<label>LINE ID *</label>
+<input id="lineid" name="lineid" type="text" placeholder="請輸入您的 LINE ID" required>
+</div>
+
+<div>
+<label>手機號碼 *</label>
+<input id="phone" name="phone" type="tel" placeholder="09xxxxxxxx" required>
+</div>
+</div>
+</div>
+
+<div class="form-box">
+<h3><span>3</span> 貸款需求</h3>
+
+<label>預計需求金額 *</label>
+<select id="amount" name="amount" required>
+<option value="">請選擇額度範圍</option>
+<option value="5萬以下">5萬以下</option>
+<option value="5萬－10萬">5萬－10萬</option>
+<option value="10萬－30萬">10萬－30萬</option>
+<option value="30萬－50萬">30萬－50萬</option>
+<option value="50萬以上">50萬以上</option>
+</select>
+</div>
+
+<div class="form-box">
+<h3><span>4</span> 財務狀況審核項目</h3>
+
+<label>銀行是否為警示戶 *</label>
+<div class="choice-group">
+<label><input type="radio" name="warningAccount" value="是" required> 是</label>
+<label><input type="radio" name="warningAccount" value="否"> 否</label>
+</div>
+
+<label>是否有個人外幣帳戶 *</label>
+<div class="choice-group">
+<label><input type="radio" name="foreignAccount" value="是" required> 是</label>
+<label><input type="radio" name="foreignAccount" value="否"> 否</label>
+</div>
+
+<label>是否有信貸／房貸／汽貸／機車 *</label>
+<div class="choice-group">
+<label><input type="radio" name="loanStatus" value="有" required> 有</label>
+<label><input type="radio" name="loanStatus" value="無"> 無</label>
+</div>
+
+<label>銀行信貸或呆帳 *</label>
+<div class="choice-group">
+<label><input type="radio" name="badDebt" value="有" required> 有</label>
+<label><input type="radio" name="badDebt" value="無"> 無</label>
+</div>
+</div>
+
+<button type="submit" id="submitBtn">
+送出貸款評估申請
 </button>
+
+<p id="formMsg" style="text-align:center; font-weight:bold; margin-top:15px;"></p>
 
 </form>
 
-<a class="line-btn"
-href="https://line.me/R/ti/p/~cindy00723"
-target="_blank">
-LINE 快速諮詢
-</a>
-
+</div>
 </div>
 
 <!-- 提醒 -->
@@ -374,45 +523,57 @@ LINE 快速諮詢
 
 <script>
 
-function sendToLine(){
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyCLqQjg2Kb6_9YxEZq-TEKDw7gHtH2PaYsG53G7rBgmgB0O9-hcllb6ADOofbOtGGR/exec";
 
-    var name =
-    document.getElementById("name").value;
+document.getElementById("loanForm").addEventListener("submit", function(e){
+    e.preventDefault();
 
-    var phone =
-    document.getElementById("phone").value;
+    var submitBtn = document.getElementById("submitBtn");
+    var formMsg = document.getElementById("formMsg");
 
-    var lineid =
-    document.getElementById("lineid").value;
+    submitBtn.disabled = true;
+    submitBtn.innerText = "送出中...";
+    formMsg.innerText = "";
 
-    var type =
-    document.getElementById("type").value;
+    var data = {
+        name: document.getElementById("name").value,
+        age: document.getElementById("age").value,
+        city: document.getElementById("city").value,
+        idNumber: document.getElementById("idNumber").value,
+        lineid: document.getElementById("lineid").value,
+        phone: document.getElementById("phone").value,
+        amount: document.getElementById("amount").value,
+        warningAccount: document.querySelector('input[name="warningAccount"]:checked').value,
+        foreignAccount: document.querySelector('input[name="foreignAccount"]:checked').value,
+        loanStatus: document.querySelector('input[name="loanStatus"]:checked').value,
+        badDebt: document.querySelector('input[name="badDebt"]:checked').value
+    };
 
-    var msg =
-    document.getElementById("msg").value;
+    fetch(GOOGLE_SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+    })
+    .then(function(){
+        formMsg.style.color = "#0f766e";
+        formMsg.innerText = "資料已送出，專人將儘快與您聯繫。";
+        document.getElementById("loanForm").reset();
 
-    var text =
-    "您好，我想了解仲信融資資訊。\n\n" +
+        submitBtn.disabled = false;
+        submitBtn.innerText = "送出貸款評估申請";
+    })
+    .catch(function(){
+        formMsg.style.color = "#dc2626";
+        formMsg.innerText = "送出失敗，請稍後再試。";
 
-    "姓名：" + name + "\n" +
+        submitBtn.disabled = false;
+        submitBtn.innerText = "送出貸款評估申請";
+    });
 
-    "手機：" + phone + "\n" +
-
-    "LINE ID：" +
-    (lineid || "未填寫") + "\n" +
-
-    "需求項目：" + type + "\n" +
-
-    "備註：" +
-    (msg || "未填寫");
-
-    var lineUrl =
-    "https://line.me/R/ti/p/~cindy00723?text="
-    + encodeURIComponent(text);
-
-    window.open(lineUrl,"_blank");
-
-}
+});
 
 </script>
 
