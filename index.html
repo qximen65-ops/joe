@@ -457,8 +457,6 @@ class="btn">
 </select>
 </div>
 
-</div>
-
 <button type="submit" id="submitBtn">
 送出貸款評估申請
 </button>
@@ -467,7 +465,6 @@ class="btn">
 
 </form>
 
-</div>
 </div>
 
 <!-- 提醒 -->
@@ -493,7 +490,6 @@ class="btn">
 </footer>
 
 <script>
-
 const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyCLqQjg2Kb6_9YxEZq-TEKDw7gHtH2PaYsG53G7rBgmgB0O9-hcllb6ADOofbOtGGR/exec";
 
 document.getElementById("loanForm").addEventListener("submit", function(e){
@@ -510,14 +506,10 @@ document.getElementById("loanForm").addEventListener("submit", function(e){
         name: document.getElementById("name").value,
         age: document.getElementById("age").value,
         city: document.getElementById("city").value,
-        idNumber: document.getElementById("idNumber").value,
         lineid: document.getElementById("lineid").value,
         phone: document.getElementById("phone").value,
         amount: document.getElementById("amount").value,
-        warningAccount: document.querySelector('input[name="warningAccount"]:checked').value,
-        foreignAccount: document.querySelector('input[name="foreignAccount"]:checked').value,
-        loanStatus: document.querySelector('input[name="loanStatus"]:checked').value,
-        badDebt: document.querySelector('input[name="badDebt"]:checked').value
+        page: window.location.href
     };
 
     fetch(GOOGLE_SCRIPT_URL, {
@@ -535,6 +527,10 @@ document.getElementById("loanForm").addEventListener("submit", function(e){
 
         submitBtn.disabled = false;
         submitBtn.innerText = "送出貸款評估申請";
+
+        setTimeout(function(){
+            window.location.href = "https://line.me/R/ti/p/~cindy00723";
+        }, 800);
     })
     .catch(function(){
         formMsg.style.color = "#dc2626";
@@ -543,9 +539,7 @@ document.getElementById("loanForm").addEventListener("submit", function(e){
         submitBtn.disabled = false;
         submitBtn.innerText = "送出貸款評估申請";
     });
-
 });
-
 </script>
 
 </body>
